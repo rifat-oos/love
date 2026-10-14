@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little Love Letter 💌</title>
+<style>
+:root{--pink:#f7c9d4;--rose:#e7839c;--red:#bd526c;--cream:#fff9f0;--ink:#533a42;--lilac:#e8def8;--line:#efdce0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 10%,#ffe5ec 0,transparent 30%),radial-gradient(circle at 90% 70%,#eee5ff 0,transparent 30%),var(--cream);font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:var(--ink)}button,input,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:999px;padding:12px 18px;background:var(--red);color:white;font-weight:700;box-shadow:0 5px 0 #9f4058;transition:.18s}button:hover{transform:translateY(-2px)}button:active{transform:translateY(2px);box-shadow:0 2px 0 #9f4058}.soft{background:#fff;color:var(--red);border:1px solid var(--line);box-shadow:0 4px 0 #f0dbe1}.tiny{padding:7px 12px;font-size:.85rem}.app{max-width:1100px;margin:auto;padding:24px 16px 60px}.top{text-align:center;margin:12px auto 26px}.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--red);font-weight:800}.top h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3.4rem);margin:8px 0;color:#9e4961}.top p{margin:0;color:#8c6d76}.layout{display:grid;grid-template-columns:minmax(280px,390px) 1fr;gap:22px;align-items:start}.panel,.preview{background:#fffdfb;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 14px 40px #b95c7412}.panel h2,.preview h2{font-family:Georgia,serif;margin:0 0 16px;color:#9e4961}.section{border-top:1px dashed var(--line);padding-top:16px;margin-top:16px}.field{display:block;margin:12px 0}.field span{display:block;font-size:.88rem;font-weight:800;margin-bottom:6px}.field input,.field textarea{width:100%;border:1px solid #ecd8de;background:#fffaf9;border-radius:12px;padding:11px 12px;color:var(--ink);outline-color:var(--rose)}textarea{resize:vertical;min-height:95px}.hint{font-size:.78rem;color:#987b83;line-height:1.45}.row{display:flex;gap:8px;align-items:center}.row input{min-width:0;flex:1}.row+.row{margin-top:8px}.item-list{display:grid;gap:8px;margin-top:10px}.mini-item{display:flex;align-items:center;gap:8px;background:#fff5f7;padding:8px 10px;border-radius:12px;font-size:.88rem}.mini-item span{flex:1;overflow-wrap:anywhere}.chips{display:flex;flex-wrap:wrap;gap:8px}.sticker{background:#fff5f7;border:1px solid var(--line);color:var(--ink);box-shadow:none;padding:8px 11px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.preview{min-height:600px;overflow:hidden;position:relative;background:linear-gradient(145deg,#fffdfb,#fff1f5)}.preview:before,.preview:after{content:"✦";position:absolute;color:#e6a4b4;font-size:22px}.preview:before{top:20px;right:25px}.preview:after{bottom:20px;left:25px}.preview-head{text-align:center}.preview-head .eyebrow{font-size:.68rem}.preview-head h2{margin:6px 0 0}.stage{min-height:490px;display:flex;align-items:center;justify-content:center;padding:24px 4px}.envelope-wrap{width:min(100%,410px);text-align:center}.envelope{position:relative;width:100%;aspect-ratio:1.42/1;cursor:pointer;filter:drop-shadow(0 15px 12px #a74c6020);perspective:900px;margin-bottom:18px}.env-back{position:absolute;inset:0;background:#e8a0b2;border-radius:12px}.env-front{position:absolute;inset:0;background:#f5c5d0;clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:12px}.env-flap{position:absolute;inset:0;background:#f8d7df;clip-path:polygon(0 0,100% 0,50% 62%);transform-origin:top;transition:transform .8s;z-index:4;border-radius:10px}.seal{position:absolute;z-index:5;left:50%;top:52%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#bd526c;color:white;font-size:28px;box-shadow:0 4px 0 #9f4058;transition:.4s}.letter-peek{position:absolute;z-index:2;left:8%;right:8%;top:8%;height:84%;background:#fffaf1;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:20px;transition:transform .8s;box-shadow:0 0 0 1px #efdce0}.letter-peek strong{font-family:Georgia,serif;font-size:clamp(1.2rem,3vw,1.7rem);color:#9e4961}.letter-peek small{margin-top:8px}.envelope.opened .env-flap{transform:rotateX(180deg);z-index:1}.envelope.opened .letter-peek{transform:translateY(-35%)}.envelope.opened .seal{opacity:0;transform:translate(-50%,-50%) scale(.4)}.tap{font-size:.85rem;color:#a16b79}.gift-content{display:none;animation:rise .75s ease both;width:100%;max-width:620px}.gift-content.visible{display:block}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}.gift-title{text-align:center;font-family:Georgia,serif;font-size:clamp(1.7rem,4vw,2.5rem);color:#9e4961;margin:0 0 8px}.to-line{text-align:center;color:#986c78;margin:0 0 20px}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}.photo-card{background:white;padding:8px 8px 12px;box-shadow:0 5px 15px #7d455015;transform:rotate(-1deg)}.photo-card:nth-child(even){transform:rotate(1.5deg)}.photo-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#f9e8ec}.photo-card p{text-align:center;font-family:Georgia,serif;margin:8px 0 0;font-size:.9rem}.letter-card{white-space:pre-wrap;line-height:1.8;background:#fffaf1;border:1px dashed #e5bdc7;border-radius:16px;padding:20px;font-family:Georgia,serif;font-size:1.02rem}.song-list{display:grid;gap:10px;margin:18px 0}.song{padding:12px;background:#fff;border:1px solid var(--line);border-radius:14px}.song strong{display:block;margin-bottom:8px}.song iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:10px}.decorations{text-align:center;font-size:1.8rem;letter-spacing:7px;margin:15px 0}.empty{color:#a88790;text-align:center;font-size:.9rem}.hidden{display:none!important}.footer{text-align:center;margin-top:26px;color:#ad8790;font-size:.8rem}.status{font-size:.8rem;color:#8b6872;margin-top:8px;overflow-wrap:anywhere}
+@keyframes flapOpen{0%{transform:rotateX(0)}100%{transform:rotateX(180deg)}}
+@keyframes letterLift{0%{transform:translateY(0) scale(.98)}70%{transform:translateY(-48%) scale(1.02)}100%{transform:translateY(-42%) scale(1)}}
+@keyframes sealPop{0%{opacity:1;transform:translate(-50%,-50%) scale(1)}60%{opacity:.9;transform:translate(-50%,-50%) scale(1.35) rotate(-12deg)}100%{opacity:0;transform:translate(-50%,-50%) scale(.2) rotate(25deg)}}
+@keyframes floatHeart{0%{opacity:0;transform:translateY(10px) scale(.5) rotate(-10deg)}25%{opacity:1}100%{opacity:0;transform:translateY(-100px) scale(1.4) rotate(20deg)}}
+.envelope.opened .env-flap{animation:flapOpen .85s cubic-bezier(.2,.8,.2,1) forwards;z-index:1}
+.envelope.opened .letter-peek{animation:letterLift .9s cubic-bezier(.2,.8,.2,1) forwards}
+.envelope.opened .seal{animation:sealPop .55s ease forwards}
+.envelope-wrap{position:relative}
+.heart-burst{position:absolute;z-index:8;left:0;right:0;top:24%;pointer-events:none}
+.heart-burst span{position:absolute;left:var(--x);font-size:var(--s);animation:floatHeart 1.3s ease-out forwards;animation-delay:var(--d)}
+.sticker-piece{display:inline-block;animation:rise .35s ease both;margin:0 5px}
+#outDecor{line-height:1.8;letter-spacing:2px}
+#linkBox{scroll-margin:20px}
+#shareUrl{font-size:.85rem}
+/* Polished envelope + music fallback */
+.song{background:transparent;border:0;padding:0}
+.music-player{background:#08090d;border-radius:20px;padding:10px;color:#fff;box-shadow:0 10px 25px #15121b20;overflow:hidden}
+.music-player iframe{display:block;width:100%;height:190px;border:0;border-radius:14px;background:#08090d}\n.music-player audio{display:block;width:100%;height:150px;accent-color:#e7839c;filter:invert(1) hue-rotate(180deg);border-radius:14px}\n.music-fallback{display:block;text-align:center;padding:16px;color:#fff;font-size:.88rem;line-height:1.5}
+.music-caption{display:flex;align-items:center;gap:10px;margin:0 2px 8px;color:#68404c;font-weight:800}
+.music-caption .note{width:34px;height:34px;display:grid;place-items:center;background:#ffe7ee;border-radius:50%;font-size:18px}
+.music-hint{font-size:.76rem;color:#9a7881;margin:8px 3px 0;line-height:1.4}
+.envelope{transition:transform .25s ease,filter .25s ease}
+.envelope:not(.opened):hover{transform:translateY(-5px) rotate(-1deg);filter:drop-shadow(0 19px 14px #a74c6030)}
+.envelope:not(.opened):hover .seal{transform:translate(-50%,-50%) scale(1.08)}
+.envelope.opened .env-flap{animation:flapOpen 1s cubic-bezier(.16,1,.3,1) forwards}
+.envelope.opened .letter-peek{animation:letterLift 1.05s cubic-bezier(.16,1,.3,1) forwards}
+.heart-burst span{text-shadow:0 3px 10px #e7839c44}
+.gift-content.visible{animation:giftReveal .9s cubic-bezier(.16,1,.3,1) both}
+@keyframes giftReveal{0%{opacity:0;transform:translateY(35px) scale(.96);filter:blur(4px)}65%{opacity:1;filter:blur(0);transform:translateY(-4px) scale(1.01)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@media(max-width:780px){.layout{grid-template-columns:1fr}.preview{min-height:500px}.stage{min-height:430px}.panel,.preview{padding:18px}.app{padding-inline:12px}}@media(max-width:420px){.photo-grid{gap:8px}.letter-card{padding:15px}.actions button{flex:1}.stage{padding-inline:0}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="eyebrow">a tiny little gift from the heart ✿</div>
+    <h1>Little Love Letter <span>💌</span></h1>
+    <p>Bikin kejutan kecil yang bisa dikirim ke orang tersayang.</p>
+  </header>
+  <main class="layout">
+    <section class="panel" id="editor">
+      <h2>♡ Buat hadiahmu</h2>
+      <p class="hint">Isi bagian-bagian ini, lalu lihat hasilnya di panel sebelah. Foto akan disertakan ke dalam link, jadi sebaiknya gunakan beberapa foto saja agar link tidak terlalu besar.</p>
+      <label class="field"><span>Nama kamu</span><input id="fromName" placeholder="mis. seseorang yang sayang kamu" maxlength="80"></label>
+      <label class="field"><span>Nama pasangan</span><input id="toName" placeholder="mis. my favorite person ♡" maxlength="80"></label>
+      <label class="field"><span>Judul hadiah</span><input id="giftTitleInput" placeholder="a little piece of my heart" maxlength="100"></label>
+      <div class="section">
+        <h3>📸 Foto kenangan</h3>
+        <label class="field"><span>Pilih foto (bisa lebih dari satu)</span><input id="photoInput" type="file" accept="image/*" multiple></label>
+        <p class="hint">Foto diperkecil otomatis untuk membantu link tetap ringan.</p>
+        <div id="photoItems" class="item-list"></div>
+      </div>
+      <div class="section">
+        <h3>🎵 Musik YouTube</h3>
+        <label class="field"><span>Judul lagu (opsional)</span><input id="songTitle" placeholder="lagu yang mengingatkanku padamu"></label>
+        <div class="row"><input id="songUrl" aria-label="Link YouTube atau audio" placeholder="Link YouTube atau URL MP3"><button id="addSong" class="tiny">Tambah</button></div>
+        <div id="songItems" class="item-list"></div>
+        <p class="hint">Musik tidak otomatis diputar karena kebijakan browser. Pasangan bisa menekan play pada pemutar YouTube.</p>
+      </div>
+      <div class="section">
+        <h3>💌 Pesan untuk pasangan</h3>
+        <label class="field"><span>Isi surat</span><textarea id="message" placeholder="Aku cuma mau bilang kalau..."></textarea></label>
+      </div>
+      <div class="section">
+        <h3>🧸 Tambahkan hal-hal manis</h3>
+        <p class="hint">Klik item untuk menambahkannya ke hadiahmu.</p>
+        <div class="chips" id="stickerChoices"></div>
+        <label class="field"><span>Pesan kecil / easter egg (opsional)</span><input id="secret" placeholder="psst... kamu orang favoritku ♡" maxlength="180"></label>
+      </div>
+      <div class="actions">
+        <button id="makeLink">Buat link hadiah ♡</button>
+        <button class="soft" id="copyLink">Salin link</button>
+        <button class="soft" id="reset">Reset</button>
+      </div>
+      <div id="linkStatus" class="status" role="status"></div>
+      <div id="linkBox" class="section hidden"><label class="field"><span>Link hadiah kamu</span><input id="shareUrl" readonly aria-label="Link hadiah yang bisa dibagikan"></label><p class="hint">Tekan lama / pilih link ini untuk menyalin manual jika clipboard diblokir browser.</p></div>
+    </section>
+    <section class="preview">
+      <div class="preview-head"><div class="eyebrow">your little surprise</div><h2>Live preview ✧</h2></div>
+      <div class="stage">
+        <div class="envelope-wrap" id="envelopeWrap">
+          <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Klik untuk membuka amplop">
+            <div class="env-back"></div>
+            <div class="letter-peek"><strong>For someone special</strong><small>one tiny surprise inside ♡</small></div>
+            <div class="env-front"></div><div class="env-flap"></div><div class="seal">♥</div>
+          </div>
+          <div class="tap">tap the envelope to open ♡</div>
+        </div>
+        <article class="gift-content" id="giftContent">
+          <h2 class="gift-title" id="outTitle">a little piece of my heart ♡</h2>
+          <p class="to-line" id="outTo">for my favorite person</p>
+          <div class="decorations" id="outDecor">♡ ✿ ☆</div>
+          <div class="photo-grid" id="outPhotos"></div>
+          <div class="song-list" id="outSongs"></div>
+          <div class="letter-card" id="outMessage">Aku cuma mau bilang kalau kamu spesial buatku. ♡</div>
+          <p id="outSecret" class="empty"></p>
+          <p id="outFrom" style="text-align:right;font-family:Georgia,serif;margin-top:18px">with love, someone who adores you ♡</p>
+          <div style="text-align:center;margin-top:18px"><button class="soft" id="closeGift">Tutup surat ♡</button></div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">made with a little bit of love ♡ · Little Love Letter</footer>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const state = {photos:[],songs:[],stickers:["♡","✿","☆"]};
+const stickerOptions = ["♡","💗","🌷","🧸","🎀","⭐","🦋","🍓","☁️","🌼","💌","🐻","✨","🌙","🍒","🫶"];
+let giftOpened = false;
+function escapeHtml(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function youtubeId(url){
+  try{
+    const u=new URL(url);
+    if(u.hostname==="youtu.be") return u.pathname.slice(1).split("/")[0];
+    if(u.hostname.endsWith("youtube.com")||u.hostname.endsWith("youtube-nocookie.com")){
+      if(u.pathname==="/watch") return u.searchParams.get("v");
+      const m=u.pathname.match(/^\/(embed|shorts|live)\/([^/?]+)/); if(m)return m[2];
+    }
+  }catch(e){}
+  return null;
+}
+function renderStickerChoices(){
+  $("stickerChoices").innerHTML=stickerOptions.map(s=>`<button type="button" class="sticker" data-sticker="${s}" aria-label="Tambahkan stiker ${s}">${s}</button>`).join("");
+  $("stickerChoices").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    state.stickers.push(b.dataset.sticker);
+    render();
+    $("linkStatus").textContent=`Stiker ${b.dataset.sticker} ditambahkan ke hadiah ♡`;
+  }));
+}
+function compressImage(file){
+  return new Promise((resolve,reject)=>{
+    const reader=new FileReader();
+    reader.onerror=reject;
+    reader.onload=()=>{
+      const img=new Image();
+      img.onerror=reject;
+      img.onload=()=>{
+        const max=900,scale=Math.min(1,max/Math.max(img.width,img.height));
+        const canvas=document.createElement("canvas");canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);
+        canvas.getContext("2d").drawImage(img,0,0,canvas.width,canvas.height);
+        resolve({src:canvas.toDataURL("image/jpeg",.72),caption:file.name.replace(/\.[^.]+$/,"").slice(0,70)});
+      };
+      img.src=reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+$("photoInput").addEventListener("change",async e=>{
+  const files=Array.from(e.target.files||[]).slice(0,8-state.photos.length);
+  for(const f of files){if(!f.type.startsWith("image/"))continue;try{state.photos.push(await compressImage(f));}catch(err){alert("Foto ini tidak bisa dibaca. Coba file gambar lain.");}}
+  e.target.value="";render();
+});
+function audioUrl(url){
+  try {
+    const u=new URL(url);
+    if(!["http:","https:"].includes(u.protocol)) return null;
+    if(/\\.(mp3|ogg|wav|m4a|aac|oga)(\\?.*)?$/i.test(u.pathname+u.search)) return u.href;
+  } catch(e) {}
+  return null;
+}
+$("addSong").addEventListener("click",()=>{
+  const url=$("songUrl").value.trim(),id=youtubeId(url),src=audioUrl(url),title=$("songTitle").value.trim()||"a song for you";
+  if(!id && !src){alert("Masukkan link video YouTube (youtu.be/...) atau URL file audio publik seperti .mp3");return;}
+  if(state.songs.length>=8){alert("Maksimal 8 lagu untuk demo ini.");return;}
+  state.songs.push({id:id||"",src:src||"",title,url});
+  $("songUrl").value="";$("songTitle").value="";render();
+});
+function getData(){
+ return {from:$("fromName").value,to:$("toName").value,title:$("giftTitleInput").value||"a little piece of my heart ♡",message:$("message").value||"Aku cuma mau bilang kalau kamu spesial buatku. ♡",secret:$("secret").value,photos:state.photos,songs:state.songs,stickers:state.stickers};
+}
+function applyData(d){
+ $("fromName").value=d.from||"";$("toName").value=d.to||"";$("giftTitleInput").value=d.title||"";$("message").value=d.message||"";$("secret").value=d.secret||"";
+ state.photos=Array.isArray(d.photos)?d.photos:[];state.songs=Array.isArray(d.songs)?d.songs:[];state.stickers=Array.isArray(d.stickers)?d.stickers:["♡","✿","☆"];render();
+}
+function render(){
+ $("photoItems").innerHTML=state.photos.length?state.photos.map((p,i)=>`<div class="mini-item"><span>📷 ${escapeHtml(p.caption||"Foto "+(i+1))}</span><button class="soft tiny" data-remove-photo="${i}">Hapus</button></div>`).join(""):'<div class="hint">Belum ada foto.</div>';
+ $("songItems").innerHTML=state.songs.length?state.songs.map((s,i)=>`<div class="mini-item"><span>🎵 ${escapeHtml(s.title)}</span><button class="soft tiny" data-remove-song="${i}">Hapus</button></div>`).join(""):'<div class="hint">Belum ada lagu.</div>';
+ $("photoItems").querySelectorAll("[data-remove-photo]").forEach(b=>b.onclick=()=>{state.photos.splice(+b.dataset.removePhoto,1);render();});
+ $("songItems").querySelectorAll("[data-remove-song]").forEach(b=>b.onclick=()=>{state.songs.splice(+b.dataset.removeSong,1);render();});
+ const d=getData();
+ $("outTitle").textContent=d.title;$("outTo").textContent=d.to?`for ${d.to} ♡`:"for my favorite person ♡";
+ $("outDecor").innerHTML=d.stickers.map((st,i)=>`<span class="sticker-piece" style="animation-delay:${Math.min(i*.035,.4)}s">${escapeHtml(st)}</span>`).join("");
+ $("outPhotos").innerHTML=d.photos.map(p=>`<div class="photo-card"><img src="${p.src}" alt="Foto kenangan"><p>${escapeHtml(p.caption||"a little memory ♡")}</p></div>`).join("");
+ $("outPhotos").classList.toggle("hidden",!d.photos.length);
+ $("outSongs").innerHTML=d.songs.map(s=>`<div class="song"><div class="music-caption"><span class="note">♫</span><span>${escapeHtml(s.title)}</span></div><div class="music-player">${s.src?`<audio controls preload="none" src="${escapeHtml(s.src)}">Browser kamu tidak mendukung audio.</audio>`:`<iframe loading="lazy" src="https://www.youtube.com/embed/${encodeURIComponent(s.id)}?controls=1&playsinline=1&rel=0" title="Pemutar musik: ${escapeHtml(s.title)}" allow="autoplay; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="music-fallback">Jika pemutar YouTube tidak tersedia, video mungkin membatasi pemutaran tertanam. Coba gunakan URL MP3 publik untuk pemutar langsung.</div>`}</div><p class="music-hint">${s.src?"Tekan play untuk memutar lagu langsung di halaman ♡":"Tekan play pada pemutar YouTube di atas ♡"}</p></div>`).join("");
+ $("outSongs").classList.toggle("hidden",!d.songs.length);
+ $("outMessage").textContent=d.message;
+ $("outSecret").textContent=d.secret?`psst... ${d.secret}`:"";
+ $("outFrom").textContent=d.from?`with love, ${d.from} ♡`:"with love, someone who adores you ♡";
+}
+function openGift(){
+ if(giftOpened)return;
+ giftOpened=true;
+ const wrap=$("envelopeWrap");
+ const burst=document.createElement("div");burst.className="heart-burst";
+ ["💗","♡","✨","💖","✿","💕","⭐","💌"].forEach((heart,i)=>{
+   const bit=document.createElement("span");bit.textContent=heart;
+   bit.style.setProperty("--x",(8+i*11)+"%");
+   bit.style.setProperty("--s",(18+(i%3)*8)+"px");
+   bit.style.setProperty("--d",(i*.07)+"s");
+   burst.appendChild(bit);
+ });
+ wrap.appendChild(burst);
+ $("envelope").classList.add("opened");
+ setTimeout(()=>{wrap.classList.add("hidden");$("giftContent").classList.add("visible");},950);
+ setTimeout(()=>burst.remove(),1900);
+}
+function closeGift(){
+ giftOpened=false;$("giftContent").classList.remove("visible");$("envelopeWrap").classList.remove("hidden");$("envelope").classList.remove("opened");
+}
+$("envelope").addEventListener("click",openGift);
+$("envelope").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openGift();}});
+$("closeGift").addEventListener("click",closeGift);
+["fromName","toName","giftTitleInput","message","secret"].forEach(id=>$(id).addEventListener("input",render));
+function makeShareUrl(){
+ const data=getData();
+ const json=JSON.stringify(data);
+ const encoded=btoa(unescape(encodeURIComponent(json))).replace(/\\+/g,"-").replace(/\\//g,"_").replace(/=+$/,"");
+ return location.href.split("#")[0]+"#gift="+encoded;
+}
+async function copyTextFallback(text){
+  const input=$("shareUrl");
+  input.value=text;
+  if(navigator.clipboard && window.isSecureContext){
+    await navigator.clipboard.writeText(text); return true;
+  }
+  input.focus(); input.select(); input.setSelectionRange(0,input.value.length);
+  try { return document.execCommand("copy"); } catch(e) { return false; }
+}
+function showShareLink(url){
+  $("linkBox").classList.remove("hidden");
+  $("shareUrl").value=url;
+}
+$("makeLink").addEventListener("click",()=>{
+ try{
+   const url=makeShareUrl();
+   showShareLink(url);
+   const isLocal=location.protocol==="file:";
+   const tooLong=url.length>18000;
+   $("linkStatus").textContent=isLocal
+     ?"Link data berhasil dibuat, tetapi file masih dibuka secara lokal. Upload ke hosting agar pasangan bisa membukanya dari perangkat lain."
+     :(tooLong
+       ?"Link berhasil dibuat, tetapi sangat panjang karena foto/pesan. Kurangi jumlah foto atau ukuran foto agar lebih mudah dibagikan."
+       :"Link hadiah berhasil dibuat ♡ Salin link di kotak berikut dan kirim ke pasangan.");
+   $("linkBox").scrollIntoView({behavior:"smooth",block:"center"});
+ }catch(err){
+   $("linkStatus").textContent="Gagal membuat link. Coba kurangi jumlah foto atau ukuran konten, lalu tekan lagi.";
+   console.error(err);
+ }
+});
+$("copyLink").addEventListener("click",async()=>{
+ try{
+   const url=$("shareUrl").value || makeShareUrl();
+   showShareLink(url);
+   let copied=false;
+   try { copied=await copyTextFallback(url); } catch(e) { copied=false; }
+   $("linkStatus").textContent=location.protocol==="file:"
+     ?"Link data sudah disiapkan, tetapi alamat file lokal tidak bisa dibuka pasangan. Upload website ke hosting agar menjadi link publik."
+     :(copied?"Link berhasil disalin ♡ Kirim ke pasanganmu!":"Salin otomatis diblokir browser. Link sudah dipilih di kotak—tekan Copy/Salin dari menu perangkat.");
+   $("shareUrl").focus();$("shareUrl").select();
+ }catch(err){
+   $("linkStatus").textContent="Belum bisa menyalin link. Tekan kotak link, pilih semua teks, lalu salin secara manual.";
+   console.error(err);
+ }
+});
+$("reset").addEventListener("click",()=>{
+ if(!confirm("Hapus semua isi hadiah dan mulai dari awal?"))return;
+ applyData({});closeGift();$("linkBox").classList.add("hidden");
+ try { history.replaceState(null,"",location.pathname+location.search); } catch(e) {}
+ $("linkStatus").textContent="Form sudah direset.";
+});
+function loadFromHash(){
+ const match=location.hash.match(/#gift=([^&]+)/);if(!match)return;
+ try{
+  let encoded=match[1].replace(/-/g,"+").replace(/_/g,"/");
+  while(encoded.length%4) encoded+="=";
+  const d=JSON.parse(decodeURIComponent(escape(atob(encoded))));
+  applyData(d);
+  $("editor").classList.add("hidden");
+  document.querySelector(".top p").textContent="A little gift, made just for you ♡";
+  document.querySelector(".preview-head h2").textContent="a gift for you";
+  $("linkStatus").textContent="";
+ }catch(e){console.warn("Link hadiah tidak bisa dibaca",e);}
+}
+renderStickerChoices();render();loadFromHash();
+</script>
+</body>
+</html>
